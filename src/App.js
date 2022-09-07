@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import Services from "./components/Services.jsx";
+import Contact from "./components/Contact.jsx";
+import Jobs from "./components/Jobs.jsx";
+import About from "./components/About.jsx";
+import Navbar from "./components/Navbar.jsx";
+import HiringStripe from "./components/HiringStripe.jsx";
 
-function App() {
+
+export default function App() {
+
+  let Component;
+  switch (window.location.pathname) {
+    case '/':
+      Component = About;
+      break;
+    case '/services':
+      Component = Services;
+      break;
+    case '/jobs':
+      Component = Jobs;
+      break;
+    case '/contact':
+      Component = Contact;
+      break;
+    default:
+      Component = About;
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-slate-900 h-screen text-white">
+      <Navbar />
+      <HiringStripe />
+      <div className="pt-6">
+        <Component />
+      </div>
     </div>
   );
 }
-
-export default App;
