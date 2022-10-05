@@ -5,6 +5,7 @@ import Jobs from "./components/Jobs.jsx";
 import About from "./components/About.jsx";
 import Navbar from "./components/Navbar.jsx";
 import HiringStripe from "./components/HiringStripe.jsx";
+import Footer from './components/Footer';
 
 
 export default function App() {
@@ -25,8 +26,8 @@ export default function App() {
       break;
     default:
       Component = About;
+    }
 
-  }
   return (
     <div className="bg-slate-900 h-screen text-white">
       <Navbar />
