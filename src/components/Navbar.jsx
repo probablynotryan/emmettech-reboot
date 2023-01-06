@@ -1,28 +1,28 @@
-import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import CompanyLogo from "../img/ETI_Logo.png";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import CompanyLogo from "../img/logo50640.jpg";
 
 const navigation = [
-  { name: 'About', href: '/', current: false },
-  { name: 'Services', href: '/services', current: false },
-  { name: 'Jobs', href: '/jobs', current: false },
-  { name: 'Contact Us', href: '/contact', current: false },
-]
+  { name: "Locations", href: "/locations", current: false },
+  { name: "Contact Us", href: "/services", current: false },
+  { name: "Apply", href: "/jobs", current: false },
+  { name: "Information", href: "/contact", current: false },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-white">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-14 items-center justify-between">
+          <div className="mx-auto max-w-7xl px-02 sm:px-6 lg:px-8">
+            <div className="relative flex h-18 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                {/* Mobile menu button */}
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-black hover:purple hover:black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -34,27 +34,29 @@ export default function Example() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="block h-12 w-auto lg:hidden"
+                    className="block h-16 w-auto lg:hidden"
                     src={CompanyLogo}
-                    alt="Emmettech Industries"
+                    alt="Prestige Home Mortgage"
                   />
                   <img
-                    className="hidden h-12 w-auto lg:block"
+                    className="hidden h-16 w-auto lg:block"
                     src={CompanyLogo}
-                    alt="Emmettech Industries"
+                    alt="Prestige Home Mortgage"
                   />
                 </div>
                 <div className="hidden sm:ml-12 sm:block">
-                  <div className="flex space-x-3">
+                  <div className="relative -left-6 flex space-x-0">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'px-3 py-4 rounded-md text-med font-medium font-roboto'
+                          item.current
+                            ? "bg-gray-900 text-white"
+                            : "text-black hover:bg-prestige hover:text-white",
+                          "px-3 py-6 rounded-md text-md font-medium font-arial"
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
                       </a>
@@ -73,10 +75,12 @@ export default function Example() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-black hover:bg-gray-700 hover:text-white",
+                    "block px-3 py-2 rounded-md text-base font-medium"
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -86,5 +90,5 @@ export default function Example() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }

@@ -1,45 +1,65 @@
-import capacitor from '../img/capacitor.png';
 // import westand from '../img/we_stand.jpg';
-import Footer from "./Footer.jsx";
-import funny from "../img/funny_filler.jpg";
+import outdoors from "../img/outdoors.jpg";
+import { AboutPanel } from "./about_subcomponents/AboutPanel";
 
 function About() {
-  return ( 
-    <div className="flex">
-      <div className="w-10 flex-initial" />
-      <div className="flex-auto w-80 h-8">
-        {/* Body Text */}
-        <p className="text-center text-2xl pb-6 text-cyan-500"> Dedication. Reliability. Value.</p>
-        <div className="inline-flex h-8">
-            <img src={capacitor} className="h-6" />
-            <p className="text-2xl pl-2 relative -top-1">Who are we?</p>
+  return (
+    <>
+      <div
+        style={{
+          position: "relative",
+          backgroundSize: "contain",
+          backgroundImage: `url(${outdoors})`,
+          backgroundRepeat: "no-repeat",
+          width: "100%",
+          height: 0,
+          paddingTop: "54.33%",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            height: "100%",
+            width: "100%",
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+          }}
+        >
+          <div
+            style={{ left: "12.5%", top: "12.5%", width: "75%", height: "75%" }}
+            className="relative bg-opacity-60 bg-black"
+          >
+            <div
+              style={{
+                fontSize: "4vw",
+                paddingTop: "18%",
+                paddingBottom: "2px",
+              }}
+              className="relative font-roboto text-white text-center align-middle"
+            >
+              We do <span className="text-amber-200">home loans</span>.
+            </div>
+            <div className="text-center pt-2 ">
+              <button
+                style={{ fontSize: "2vw" }}
+                className="bg-prestige hover:bg-slate-700 text-white font-bold py-2 px-4 border-solid border border-gray-400 rounded"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
         </div>
-        <p className="indent-12 text-l text-gray-300">
-          Our aim has been to provide you with expert service, honest estimates, and helpful consultations. From professional guidance to long-lasting work, our kind and knowledgeable staff is here to help you every step of the way, because we know what it’s like to be in your shoes.
-        </p>
-        <p className="indent-12 text-l text-gray-300">
-          <img src={funny} className="p-6 float-right w-80" />
-          At <span className="text-cyan-500">Emmettech</span>, we make sure your needs come first and offer a variety of top-quality services. Our main goal is to take care of everything from the very beginning, bringing you exceptional results.
-        </p>
-        <div className="inline-flex h-8 pt-6">
-            <img src={capacitor} className="h-6" />
-            <p className="text-2xl pl-2 relative -top-1">What services do we offer?</p>
-        </div>
-        <p className="indent-12 text-l text-gray-300">
-          All of them. Next question, please.
-        </p>
-        {/* End Body */}
-
-
-        {/* Temp Footer */}
-          <Footer />
-        {/* End Temp Footer */}
       </div>
-      <div className="flex-initial w-10" />
-    </div>
-
-
-   );
+      <div
+        style={{ fontSize: "2vm" }}
+        className="flex justify-between py-4 px-5 text-black text-lg"
+      >
+        <AboutPanel />
+      </div>
+    </>
+  );
 }
 
 export default About;
