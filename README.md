@@ -2,7 +2,4 @@
 
 ### Food, fun and hotdog buns.
 
-
-![demo picture](./src/img/demo.png)
-
 ### More to come.
