@@ -2,7 +2,6 @@
 
 ### Written in ReactJS & Tailwind
 
-<<<<<<< HEAD
 A clone of the landing page for a  popular ROI for mortgage brokers, fixing window scaling issues and switching images to be legal to use.
 
 ![demo picture](./src/img/demo.png)
@@ -20,6 +19,3 @@ A clone of the landing page for a  popular ROI for mortgage brokers, fixing wind
 - Build more pages that use protected wordage (per industry)
 
 #### by probablynotryan
-=======
-### More to come.
->>>>>>> f254aab30a4b0dbfa327ad1afcb83cae3e64278a
