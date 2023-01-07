@@ -4,9 +4,9 @@ import CompanyLogo from "../img/logo50640.jpg";
 
 const navigation = [
   { name: "Locations", href: "/locations", current: false },
-  { name: "Contact Us", href: "/services", current: false },
-  { name: "Apply", href: "/jobs", current: false },
-  { name: "Information", href: "/contact", current: false },
+  { name: "Contact Us", href: "/contactus", current: false },
+  { name: "Apply", href: "/apply", current: false },
+  { name: "Information", href: "/information", current: false },
 ];
 
 function classNames(...classes) {
